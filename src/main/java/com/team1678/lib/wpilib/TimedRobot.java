@@ -1,4 +1,4 @@
-package com.team254.lib.wpilib;
+package com.team1678.lib.wpilib;
 
 /*----------------------------------------------------------------------------*/
 /* Copyright (c) 2017-2018 FIRST. All Rights Reserved.                        */
@@ -48,9 +48,8 @@ public class TimedRobot extends IterativeRobotBase {
         HAL.report(tResourceType.kResourceType_Framework, tInstances.kFramework_Timed);
     }
 
-    @Override
     @SuppressWarnings("NoFinalizer")
-    protected void finalize() {
+    protected void trFinalize() {
         NotifierJNI.stopNotifier(m_notifier);
         NotifierJNI.cleanNotifier(m_notifier);
     }
